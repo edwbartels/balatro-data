@@ -1,0 +1,10 @@
+/frontend
+/backend/app
+/backend/venv
+/backend/.env
+/backend/scripts/save_states
+/backend/save_states
+/backend/venv
+/.env
+
+**/__pycache__/
