@@ -2,7 +2,7 @@ import zlib
 from lua_to_json import convert_save_to_json
 
 
-def read_save_file(filename, output_file):
+def read_meta_file(filename, output_file):
     with open(filename, "rb") as f:
         compressed_data = f.read()
 
@@ -10,14 +10,18 @@ def read_save_file(filename, output_file):
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(decompressed.decode("utf-8"))
-        read_game_state(output_file)
+        read_meta_state(output_file)
 
 
-def read_game_state(save_file_path: str) -> dict:
+def read_meta_state(save_file_path: str) -> dict:
     return convert_save_to_json(save_file_path)
 
 
 if __name__ == "__main__":
     # Example usage
-    save_data = read_game_state("../save_state.lua")
-    print(f"Current state: {save_data['STATE']}")
+    read_meta_file(
+        "/mnt/c/Users/Maljik/AppData/Roaming/Balatro/settings.jkr",
+        "../save_states/meta_state.lua",
+    )
+    # meta_data = read_meta_state("../meta_state.lua")
+    # print(f"Current meta: {meta_data}")

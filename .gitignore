@@ -1,10 +1,88 @@
 /frontend
-/backend/app
+# /backend/app
 /backend/venv
 /backend/.env
 /backend/scripts/save_states
 /backend/save_states
 /backend/venv
 /.env
+/backend/terminal_commands.md
 
 **/__pycache__/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PostgreSQL
+*.psql
+*.pgsql
+*.dump
+*.sql
+*.backup
+pgdata/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+.python-version
+
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.vs/
+
+# Logs
+*.log
+logs/
+log/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# Alembic
+**/versions/*
+!versions/.keep
+
+# OS
+.DS_Store
+Thumbs.db
+*.db
+*.sqlite3
+
+# Project specific
+config.py
+secrets.json
+*.env
+*.env.*
+!.env.example

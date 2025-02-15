@@ -7,6 +7,9 @@ from datetime import datetime
 from typing import Dict, Set, Any, Union
 from dataclasses import dataclass
 from pathlib import Path
+from app.util.process_change import process_change
+from app.util.process_save_json import process_save_file
+from app.util.db_inserts import update_db
 
 
 @dataclass
@@ -110,56 +113,69 @@ class StateWatcher:
                     print(
                         f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] State changes detected:"
                     )
-                    for field, (old_val, new_val) in changes.items():
-                        if field == "cardAreas.jokers.cards":
-                            print("Jokers: ")
-                            for idx, joker in enumerate(
-                                new_state["cardAreas"]["jokers"]["cards"].values()
-                            ):
-                                print(
-                                    f"    label: {joker['label']}, save_fields.center: {joker['save_fields']['center']}, edition: {joker['edition']['type'] if 'edition' in joker.keys() else 'base'}"
-                                )
-                                # print(joker["ability"]["name"])
-                                # print(f"{joker['name']}\n")
-                            # print(new_state.keys())
-                            # print(new_state["cardAreas"]["jokers"]["cards"])
-                            # print(new_state.cardAreas.jokers)
-                            # for joker in new_state.cardAreas.jokers.cards:
-                            #     print(f"{joker.name}\n")
-                            print("\n")
-                        elif field == "cardAreas.deck.cards":
-                            continue
-                        else:
-                            print(f"  {field}: {old_val} -> {new_val}")
+                    filtered_save = process_save_file(new_state)
+                    update_db(filtered_save)
+                    # print(filtered_save)
+                    # for field, (old_val, new_val) in changes.items():
+                    #     if field == "GAME.round":
+                    #         print("Jokers: ")
+                    #         for idx, joker in enumerate(
+                    #             new_state["cardAreas"]["jokers"]["cards"].values()
+                    #         ):
+                    #             print(
+                    #                 f"    label: {joker['label']}, save_fields.center: {joker['save_fields']['center']}, edition: {joker['edition']['type'] if 'edition' in joker.keys() else 'base'}"
+                    #             )
+                    #             # print(joker["ability"]["name"])
+                    #             # print(f"{joker['name']}\n")
+                    #         # print(new_state.keys())
+                    #         # print(new_state["cardAreas"]["jokers"]["cards"])
+                    #         # print(new_state.cardAreas.jokers)
+                    #         # for joker in new_state.cardAreas.jokers.cards:
+                    #         #     print(f"{joker.name}\n")
+                    #         print("\n")
+                    #     # elif field == "cardAreas.deck.cards":
+                    #     #     continue
+                    #     # elif (
+                    #     #     field == "GAME.round"
+                    #     #     or field == "GAME.pseudorandom.hashed_seed"
+                    #     # ):
+                    #     #     process_change(new_state)
+                    #     #     print(f"  {field}: {old_val} -> {new_val}")
+
+                    #     # else:
+                    #     #     print(f"  {field}: {old_val} -> {new_val}")
             else:
                 print(
                     f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Initial state loaded"
                 )
                 # Print initial values of watched fields
-                for field in self.config.fields_to_watch:
-                    value = self.get_nested_value(new_state, field)
-                    if field == "cardAreas.jokers.cards":
-                        print("\nJokers: ")
-                        for idx, joker in enumerate(
-                            new_state["cardAreas"]["jokers"]["cards"].values()
-                        ):
-                            print(
-                                f"    label: {joker['label']}, save_fields.center: {joker['save_fields']['center']}, edition: {joker['edition']['type'] if 'edition' in joker.keys() else 'base'}"
-                            )
-                            # print(joker)
-                        print("\n")
-                    elif field == "cardAreas.deck.cards":
-                        for card in new_state["cardAreas"]["deck"]["cards"].values():
-                            "card"
-                            "edition" in card and print(card["edition"])
-                            "effect" in card["ability"] and print(
-                                card["ability"]["effect"]
-                            )
-                            "seal" in card and print(card["seal"])
-                    else:
-                        print(f"  {field}: {value}")
+                filtered_save = process_save_file(new_state)
+                print(type(filtered_save))
+                update_db(filtered_save)
+                # print(filtered_save)
 
-            # Update last state
+            #     for field in self.config.fields_to_watch:
+            #         value = self.get_nested_value(new_state, field)
+            #         if field in [
+            #             "cardAreas.jokers.cards",
+            #             "GAME.pseudorandom.hashed_seed",
+            #         ]:
+            #             filtered_save = process_save_file(new_state)
+            #             print(filtered_save)
+            #         # elif field == "cardAreas.deck.cards":
+            #         #     for card in new_state["cardAreas"]["deck"]["cards"].values():
+            #         #         "card"
+            #         #         "edition" in card and print(card["edition"])
+            #         #         "effect" in card["ability"] and print(
+            #         #             card["ability"]["effect"]
+            #         #         )
+            #         #         "seal" in card and print(card["seal"])
+            #         # else:
+            #         #     print(f"  {field}: {value}")
+
+            #         # process_change(new_state)
+
+            # # Update last state
             self.last_state = new_state
 
         except Exception as e:
@@ -200,15 +216,15 @@ def main():
     # Configuration
     config = WatcherConfig(
         save_file="/mnt/c/Users/Maljik/AppData/Roaming/Balatro/1/save.jkr",
-        temp_lua_file="save_state.lua",
-        temp_json_file="save_state.json",
-        lua_converter_script="../lua-scripts/save_to_json.lua",
+        temp_lua_file="/mnt/c/Users/Maljik/Documents/coding-projects/balatro/dashboard/backend/scripts/python_scripts/save_state.lua",
+        temp_json_file="/mnt/c/Users/Maljik/Documents/coding-projects/balatro/dashboard/backend/scripts/python_scripts/save_state.json",
+        lua_converter_script="/mnt/c/Users/Maljik/Documents/coding-projects/balatro/dashboard/backend/scripts/lua-scripts/save_to_json.lua",
         fields_to_watch={
             # "STATE",
             # "BACK",
-            "BLIND",
-            "GAME.pool_flags",
-            "tags",
+            # "BLIND",
+            # "GAME.pool_flags",
+            # "tags",
             # "cardAreas.deck.cards",
             # "BLIND.boss",
             # "BLIND.disabled",
@@ -220,20 +236,22 @@ def main():
             # "GAME.interest_ammount",
             # "GAME.interest_cap",
             "GAME.round",
+            # "BACK.key",
+            "GAME.pseudorandom.hashed_seed",
             # "GAME.round_resets.blind_states",
-            "GAME.subhash",
-            "GAME.bosses_used",
-            "GAME.used_vouchers",
+            # "GAME.subhash",
+            # "GAME.bosses_used",
+            # "GAME.used_vouchers",
             # "GAME.tags",
             # "GAME.used_jokers",
-            # "GAME.won",
+            "GAME.won",
             # "GAME.used_vouchers",
             # "GAME.woncardAreas.consumeables.cards",
             # "cardAreas.deck.cards"
             # "cardAreas.jokers.cards",
-            "GAME.round_resets.blind_tags",
-            "GAME.tags",
-            "tags",
+            # "GAME.round_resets.blind_tags",
+            # "GAME.tags",
+            # "tags",
             # "GAME['CURRENT_ROUND']",  # Using dictionary notation
         },
     )
