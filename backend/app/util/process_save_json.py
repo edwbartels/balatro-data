@@ -21,6 +21,16 @@ class DotDict:
             else:
                 setattr(self, key, value)
 
+    def __iter__(self):
+        # Iterate over all attributes except _defaults
+        for key, value in vars(self).items():
+            if key != "_defaults":
+                yield key
+
+    def __getitem__(self, key):
+        # Allow dictionary-style access
+        return getattr(self, key)
+
     def __getattr__(self, name):
         # Return default value if key doesn't exist
         try:
@@ -159,30 +169,68 @@ def create_card_filter(base_ability_keys, special_card_configs):
         if not isinstance(card_data, dict):
             return card_data
 
-        result = {}
+        result = {
+            "joker_id": None,
+            "edition": "standard",
+            "persistence": "standard",
+            "perish_tally": None,
+        }
 
         card_id = card_data.get("save_fields", {}).get("center")
+        result["joker_id"] = card_id
 
-        ability_keys = base_ability_keys.copy()
+        # filtered_abilities = base_ability_keys.copy()
 
-        if card_id in special_card_configs:
-            ability_keys.update(special_card_configs[card_id])
+        # if card_id in special_card_configs:
+        #     filtered_abilities.update(
+        #         {key: None for key in special_card_configs[card_id]}
+        #     )
+
+        if "ability" in card_data:
+            print(card_data["ability"])
+            if "eternal" in card_data["ability"].keys():
+                result["persistence"] = "eternal"
+            elif "perishable" in card_data["ability"].keys():
+                result["persistence"] = "perishable"
+                result["perish_tally"] = card_data["ability"]["perish_tally"]
+
+            result["is_rental"] = (
+                True if "rental" in card_data["ability"].keys() else False
+            )
+
+            # filtered_abilities.update(
+            #     {
+            #         k: v
+            #         for k, v in card_data["ability"].items()
+            #         if k in filtered_abilities
+            #         and k not in ["eternal", "perishable", "perish_tally", "rental"]
+            #     }
+            # )
+
+            # result["ability"] = filtered_abilities
 
         for key, value in card_data.items():
-            if key == "ability":
-                result[key] = {k: v for k, v in value.items() if k in ability_keys}
-            elif key in base_card_keys:
+            if key != "ability" and key in base_card_keys:
                 result[key] = value
+        result["edition"] = (
+            card_data["edition"]["type"]
+            if "edition" in card_data.keys()
+            else "standard"
+        )
+        result["special"] = (
+            None if "special" not in result.keys() else result["special"]
+        )
+
         return result
 
     return filter_card
 
 
 base_ability_keys = {
-    "eternal": None,
-    "perishable": None,
+    "eternal": False,
+    "perishable": False,
     "perish_tally": None,
-    "rental": None,
+    "rental": False,
 }
 
 special_card_configs = {
@@ -191,7 +239,7 @@ special_card_configs = {
     }
 }
 
-base_card_keys = {"save_fields": None, "label": None, "edition": None}
+base_card_keys = {"label": None, "special": None}
 
 custom_keys = {
     "BACK": {"key": None},
@@ -253,12 +301,12 @@ custom_keys = {
         "used_vouchers": None,
         "won": None,
     },
-    # "cardAreas": {
-    #     "jokers": {
-    #         "cards": {"*": create_card_filter(base_ability_keys, special_card_configs)}
-    #     }
-    # },
-    "cardAreas": {"jokers": {"cards": None}},
+    "cardAreas": {
+        "jokers": {
+            "cards": {"*": create_card_filter(base_ability_keys, special_card_configs)}
+        }
+    },
+    # "cardAreas": {"jokers": {"cards": None}},
 }
 
 custom_defaults = {
@@ -300,5 +348,9 @@ custom_defaults = {
         "pool_flags": {"gros_michel_extinct": False},
         "won": False,
     },
-    "cardAreas": {"jokers": {"cards": {}}},
+    "cardAreas": {
+        "jokers": {
+            "cards": {"*": create_card_filter(base_ability_keys, special_card_configs)}
+        }
+    },
 }

@@ -113,6 +113,7 @@ class StateWatcher:
                     print(
                         f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] State changes detected:"
                     )
+                    print("changes", changes.items())
                     filtered_save = process_save_file(new_state)
                     update_db(filtered_save)
                     # print(filtered_save)
@@ -150,7 +151,7 @@ class StateWatcher:
                 )
                 # Print initial values of watched fields
                 filtered_save = process_save_file(new_state)
-                print(type(filtered_save))
+                # print(type(filtered_save))
                 update_db(filtered_save)
                 # print(filtered_save)
 

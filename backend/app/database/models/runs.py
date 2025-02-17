@@ -16,9 +16,7 @@ class Run(Base, TimestampMixin):
     )
     deck_id: Mapped[str] = mapped_column(String, ForeignKey("decks.id"), nullable=False)
 
-    hashed_seed: Mapped[float] = mapped_column(
-        Float, index=True, nullable=False, unique=True
-    )
+    hashed_seed: Mapped[float] = mapped_column(Float, index=True, nullable=False)
     seed: Mapped[str] = mapped_column(String, nullable=False)
     complete: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     win: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)

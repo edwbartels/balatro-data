@@ -4,34 +4,34 @@
       "center": {
         "alerted": true,
         "config": {
-          "randomize_rank_suit": true
+          "dollars": 10
         },
         "discovered": true,
-        "key": "b_erratic",
-        "name": "Erratic Deck",
-        "order": 15,
+        "key": "b_yellow",
+        "name": "Yellow Deck",
+        "order": 3,
         "pos": {
-          "x": 2,
-          "y": 3
+          "x": 1,
+          "y": 2
         },
         "set": "Back",
         "stake": 1,
         "unlock_condition": {
-          "stake": 7,
-          "type": "win_stake"
+          "amount": 50,
+          "type": "discover_amount"
         },
         "unlocked": true
       },
       "config": {
-        "randomize_rank_suit": true
+        "dollars": 10
       },
       "text_UI": ""
     },
-    "key": "b_erratic",
-    "name": "Erratic Deck",
+    "key": "b_yellow",
+    "name": "Yellow Deck",
     "pos": {
-      "x": 2,
-      "y": 3
+      "x": 1,
+      "y": 2
     }
   },
   "BLIND": {
@@ -45,12 +45,11 @@
     "name": ""
   },
   "GAME": {
-    "STOP_USE": 2,
+    "STOP_USE": 1,
     "bankrupt_at": 0,
     "banned_keys": {},
     "base_reroll_cost": 5,
     "blind": "\"MANUAL_REPLACE\"",
-    "blind_on_deck": "Small",
     "bosses_used": {
       "bl_arm": 0,
       "bl_club": 0,
@@ -63,8 +62,8 @@
       "bl_fish": 0,
       "bl_flint": 0,
       "bl_goad": 0,
-      "bl_head": 1,
-      "bl_hook": 0,
+      "bl_head": 0,
+      "bl_hook": 1,
       "bl_house": 0,
       "bl_manacle": 0,
       "bl_mark": 0,
@@ -83,10 +82,8 @@
     },
     "cards_played": {
       "10": {
-        "suits": {
-          "Diamonds": true
-        },
-        "total": 1
+        "suits": {},
+        "total": 0
       },
       "2": {
         "suits": {},
@@ -121,28 +118,20 @@
         "total": 0
       },
       "Ace": {
-        "suits": {
-          "Hearts": true
-        },
-        "total": 1
+        "suits": {},
+        "total": 0
       },
       "Jack": {
-        "suits": {
-          "Hearts": true
-        },
-        "total": 1
+        "suits": {},
+        "total": 0
       },
       "King": {
-        "suits": {
-          "Spades": true
-        },
-        "total": 1
+        "suits": {},
+        "total": 0
       },
       "Queen": {
-        "suits": {
-          "Spades": true
-        },
-        "total": 1
+        "suits": {},
+        "total": 0
       }
     },
     "chips": 0,
@@ -156,7 +145,7 @@
       },
       "cards_flipped": 0,
       "castle_card": {
-        "suit": "Clubs"
+        "suit": "Hearts"
       },
       "current_hand": {
         "chip_text": "0",
@@ -171,43 +160,34 @@
       },
       "discards_left": 3,
       "discards_used": 0,
-      "dollars": 3,
+      "dollars": 0,
       "dollars_to_be_earned": "",
       "free_rerolls": 0,
       "hands_left": 4,
-      "hands_played": 1,
+      "hands_played": 0,
       "idol_card": {
-        "id": 6,
-        "rank": "6",
-        "suit": "Spades"
+        "id": 12,
+        "rank": "Queen",
+        "suit": "Hearts"
       },
       "jokers_purchased": 0,
       "mail_card": {
-        "id": 13,
-        "rank": "King"
+        "id": 8,
+        "rank": "8"
       },
       "most_played_poker_hand": "High Card",
       "reroll_cost": 5,
       "reroll_cost_increase": 0,
       "round_dollars": 0,
       "round_text": "Round ",
-      "used_packs": {
-        "1": "p_buffoon_normal_2",
-        "2": "p_standard_normal_2"
-      },
-      "voucher": "v_reroll_surplus"
+      "used_packs": {},
+      "voucher": "v_tarot_merchant"
     },
     "discount_percent": 0,
-    "dollars": 7,
+    "dollars": 14,
     "ecto_minus": 1,
     "edition_rate": 1,
-    "first_shop_buffoon": true,
-    "hand_usage": {
-      "Straight": {
-        "count": 1,
-        "order": "Straight"
-      }
-    },
+    "hand_usage": {},
     "hands": {
       "Five of a Kind": {
         "chips": 120,
@@ -518,8 +498,8 @@
         "level": 1,
         "mult": 4,
         "order": 8,
-        "played": 1,
-        "played_this_round": 1,
+        "played": 0,
+        "played_this_round": 0,
         "s_chips": 30,
         "s_mult": 4,
         "visible": true
@@ -630,7 +610,7 @@
         "visible": true
       }
     },
-    "hands_played": 1,
+    "hands_played": 0,
     "inflation": 0,
     "interest_amount": 1,
     "interest_cap": 25,
@@ -640,19 +620,10 @@
     "last_blind": {
       "name": ""
     },
-    "last_hand_played": "Straight",
     "max_jokers": 0,
     "modifiers": {
       "no_blind_reward": {
         "Small": true
-      },
-      "scaling": 2
-    },
-    "orbital_choices": {
-      "1": {
-        "Big": "Straight",
-        "Boss": "Flush",
-        "Small": "Flush"
       }
     },
     "pack_size": 2,
@@ -662,73 +633,47 @@
     "playing_card_rate": 0,
     "pool_flags": {},
     "previous_round": {
-      "dollars": 7
+      "dollars": 4
     },
     "probabilities": {
       "normal": 1
     },
     "pseudorandom": {
-      "Joker2sho1": 0.08016806672,
-      "Tag1": 0.1740575563,
-      "Tag1_resample2": 0.449824245,
-      "Voucher1": 0.75507759,
-      "anc1": 0.3606238438,
-      "boss": 0.8091767734,
-      "cas1": 0.7029980409,
-      "cashout1": 0.0002431549659,
-      "cdt1": 0.605473559,
-      "edisho1": 0.100161479,
-      "erratic": 0.4521430731,
-      "etperpoll1": 0.3557720727,
-      "hashed_seed": 0.4405473927,
-      "idol1": 0.3551593213,
-      "mail1": 0.3381362478,
-      "nr1": 0.5015533285,
-      "orbital": 0.6162254411,
-      "rarity1sho": 0.2889589135,
-      "seed": "HZWUM5XL",
-      "shop_pack1": 0.966571066,
-      "shuffle": 0.5997468725
+      "Tag1": 0.1251137884,
+      "Tag1_resample2": 0.3602188998,
+      "Voucher1": 0.3867813696,
+      "Voucher1_resample2": 0.6340874682,
+      "anc1": 0.4527072268,
+      "boss": 0.1425607584,
+      "cas1": 0.4301888803,
+      "hashed_seed": 0.9905250212,
+      "idol1": 0.9426633637,
+      "mail1": 0.3537841243,
+      "seed": "KR64YINP",
+      "shuffle": 0.2873653406
     },
     "rental_rate": 3,
-    "round": 1,
+    "round": 0,
     "round_bonus": {
       "discards": 0,
       "next_hands": 0
     },
     "round_resets": {
       "ante": 1,
-      "blind": {
-        "alerted": true,
-        "debuff": {},
-        "debuff_text": "",
-        "defeated": false,
-        "discovered": true,
-        "dollars": 3,
-        "key": "bl_small",
-        "mult": 1,
-        "name": "Small Blind",
-        "order": 1,
-        "pos": {
-          "x": 0,
-          "y": 0
-        },
-        "vars": {}
-      },
       "blind_ante": 1,
       "blind_choices": {
         "Big": "bl_big",
-        "Boss": "bl_head",
+        "Boss": "bl_hook",
         "Small": "bl_small"
       },
       "blind_states": {
         "Big": "Upcoming",
         "Boss": "Upcoming",
-        "Small": "Defeated"
+        "Small": "Select"
       },
       "blind_tags": {
-        "Big": "tag_holo",
-        "Small": "tag_voucher"
+        "Big": "tag_skip",
+        "Small": "tag_skip"
       },
       "boss_rerolled": false,
       "discards": 3,
@@ -736,7 +681,7 @@
       "loc_blind_states": {
         "Big": "Upcoming",
         "Boss": "Upcoming",
-        "Small": "Defeated"
+        "Small": "Select"
       },
       "reroll_cost": 5
     },
@@ -746,7 +691,7 @@
         "label": "Cards Discarded"
       },
       "cards_played": {
-        "amt": 5,
+        "amt": 0,
         "label": "Cards Played"
       },
       "cards_purchased": {
@@ -754,15 +699,15 @@
         "label": "Cards Purchased"
       },
       "furthest_ante": {
-        "amt": 1,
+        "amt": 0,
         "label": "Ante"
       },
       "furthest_round": {
-        "amt": 1,
+        "amt": 0,
         "label": "Round"
       },
       "hand": {
-        "amt": 324,
+        "amt": 0,
         "label": "Best Hand"
       },
       "new_collection": {
@@ -778,26 +723,25 @@
         "label": "Times Rerolled"
       }
     },
-    "seeded": true,
     "selected_back": "\"MANUAL_REPLACE\"",
     "selected_back_key": {
       "alerted": true,
       "config": {
-        "randomize_rank_suit": true
+        "dollars": 10
       },
       "discovered": true,
-      "key": "b_erratic",
-      "name": "Erratic Deck",
-      "order": 15,
+      "key": "b_yellow",
+      "name": "Yellow Deck",
+      "order": 3,
       "pos": {
-        "x": 2,
-        "y": 3
+        "x": 1,
+        "y": 2
       },
       "set": "Back",
       "stake": 1,
       "unlock_condition": {
-        "stake": 7,
-        "type": "win_stake"
+        "amount": 50,
+        "type": "discover_amount"
       },
       "unlocked": true
     },
@@ -807,42 +751,31 @@
     "skips": 0,
     "sort": "desc",
     "spectral_rate": 0,
-    "stake": 3,
+    "stake": 2,
     "starting_deck_size": 52,
     "starting_params": {
       "ante_scaling": 1,
       "consumable_slots": 2,
       "discards": 3,
-      "dollars": 4,
-      "erratic_suits_and_ranks": true,
+      "dollars": 14,
+      "erratic_suits_and_ranks": false,
       "hand_size": 8,
       "hands": 4,
       "joker_slots": 5,
       "no_faces": false,
       "reroll_cost": 5
     },
-    "subhash": "1S",
-    "tag_tally": 2,
+    "tag_tally": 0,
     "tags": {},
     "tarot_rate": 4,
-    "unused_discards": 3,
-    "used_jokers": {
-      "j_luchador": true,
-      "j_space": true,
-      "p_buffoon_normal_1": true,
-      "p_buffoon_normal_2": true,
-      "p_standard_normal_1": true,
-      "p_standard_normal_2": true,
-      "p_standard_normal_3": true,
-      "p_standard_normal_4": true,
-      "v_reroll_surplus": true
-    },
+    "unused_discards": 0,
+    "used_jokers": {},
     "used_vouchers": {},
     "voucher_text": "",
     "win_ante": 8,
     "won": false
   },
-  "STATE": 5,
+  "STATE": 7,
   "VERSION": "1.0.1n-FULL",
   "cardAreas": {
     "consumeables": {
@@ -861,297 +794,6 @@
     "deck": {
       "cards": {
         "1": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 7,
-            "name": "7 of Clubs",
-            "nominal": 7,
-            "original_value": "7",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
-            "times_played": 0,
-            "value": "7"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 660
-          },
-          "playing_card": 7,
-          "rank": 1,
-          "save_fields": {
-            "card": "C_7",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2650,
-          "sprite_facing": "back"
-        },
-        "10": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 6,
-            "name": "6 of Diamonds",
-            "nominal": 6,
-            "original_value": "6",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "6"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 670
-          },
-          "playing_card": 17,
-          "rank": 10,
-          "save_fields": {
-            "card": "D_6",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2660,
-          "sprite_facing": "back"
-        },
-        "11": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "played_this_ante": true,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0.4,
-            "id": 14,
-            "name": "Ace of Hearts",
-            "nominal": 11,
-            "original_value": "Ace",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 1,
-            "value": "Ace"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 688
-          },
-          "playing_card": 35,
-          "rank": 11,
-          "save_fields": {
-            "card": "H_A",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2678,
-          "sprite_facing": "back"
-        },
-        "12": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Diamonds",
-            "nominal": 10,
-            "original_value": "Jack",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "Jack"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 675
-          },
-          "playing_card": 22,
-          "rank": 12,
-          "save_fields": {
-            "card": "D_J",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2665,
-          "sprite_facing": "back"
-        },
-        "13": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Hearts",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 693
-          },
-          "playing_card": 40,
-          "rank": 13,
-          "save_fields": {
-            "card": "H_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2683,
-          "sprite_facing": "back"
-        },
-        "14": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -1197,368 +839,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 704
+            "playing_card": 364
           },
-          "playing_card": 51,
-          "rank": 14,
+          "playing_card": 52,
+          "rank": 1,
           "save_fields": {
             "card": "S_T",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2694,
+          "sort_id": 477,
           "sprite_facing": "back"
         },
-        "15": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Clubs",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
-            "times_played": 0,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 662
-          },
-          "playing_card": 9,
-          "rank": 15,
-          "save_fields": {
-            "card": "C_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2652,
-          "sprite_facing": "back"
-        },
-        "16": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Clubs",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
-            "times_played": 0,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 663
-          },
-          "playing_card": 10,
-          "rank": 16,
-          "save_fields": {
-            "card": "C_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2653,
-          "sprite_facing": "back"
-        },
-        "17": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.4,
-            "id": 14,
-            "name": "Ace of Diamonds",
-            "nominal": 11,
-            "original_value": "Ace",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "Ace"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 673
-          },
-          "playing_card": 20,
-          "rank": 17,
-          "save_fields": {
-            "card": "D_A",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2663,
-          "sprite_facing": "back"
-        },
-        "18": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "played_this_ante": true,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Diamonds",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 1,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 682
-          },
-          "playing_card": 29,
-          "rank": 18,
-          "save_fields": {
-            "card": "D_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2672,
-          "sprite_facing": "back"
-        },
-        "19": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Diamonds",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 677
-          },
-          "playing_card": 24,
-          "rank": 19,
-          "save_fields": {
-            "card": "D_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2667,
-          "sprite_facing": "back"
-        },
-        "2": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Diamonds",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 678
-          },
-          "playing_card": 25,
-          "rank": 2,
-          "save_fields": {
-            "card": "D_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2668,
-          "sprite_facing": "back"
-        },
-        "20": {
+        "10": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -1587,15 +880,15 @@
               "4": 1
             },
             "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Clubs",
-            "nominal": 10,
-            "original_value": "10",
+            "id": 7,
+            "name": "7 of Clubs",
+            "nominal": 7,
+            "original_value": "7",
             "suit": "Clubs",
             "suit_nominal": 0.02,
             "suit_nominal_original": 0.002,
             "times_played": 0,
-            "value": "10"
+            "value": "7"
           },
           "base_cost": 1,
           "cost": 1,
@@ -1604,19 +897,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 664
+            "playing_card": 318
           },
-          "playing_card": 11,
-          "rank": 20,
+          "playing_card": 6,
+          "rank": 10,
           "save_fields": {
-            "card": "C_T",
+            "card": "C_7",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2654,
+          "sort_id": 431,
           "sprite_facing": "back"
         },
-        "21": {
+        "11": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -1662,77 +955,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 692
+            "playing_card": 350
           },
-          "playing_card": 39,
-          "rank": 21,
+          "playing_card": 38,
+          "rank": 11,
           "save_fields": {
             "card": "H_Q",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2682,
+          "sort_id": 463,
           "sprite_facing": "back"
         },
-        "22": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 5,
-            "name": "5 of Diamonds",
-            "nominal": 5,
-            "original_value": "5",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "5"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 668
-          },
-          "playing_card": 15,
-          "rank": 22,
-          "save_fields": {
-            "card": "D_5",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2658,
-          "sprite_facing": "back"
-        },
-        "23": {
+        "12": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -1760,16 +995,16 @@
               "3": 0.1843137255,
               "4": 1
             },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Hearts",
-            "nominal": 10,
-            "original_value": "Jack",
+            "face_nominal": 0,
+            "id": 4,
+            "name": "4 of Hearts",
+            "nominal": 4,
+            "original_value": "4",
             "suit": "Hearts",
             "suit_nominal": 0.03,
             "suit_nominal_original": 0.003,
             "times_played": 0,
-            "value": "Jack"
+            "value": "4"
           },
           "base_cost": 1,
           "cost": 1,
@@ -1778,19 +1013,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 689
+            "playing_card": 341
           },
-          "playing_card": 36,
-          "rank": 23,
+          "playing_card": 29,
+          "rank": 12,
           "save_fields": {
-            "card": "H_J",
+            "card": "H_4",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2679,
+          "sort_id": 454,
           "sprite_facing": "back"
         },
-        "24": {
+        "13": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -1813,19 +1048,19 @@
           },
           "base": {
             "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
               "4": 1
             },
             "face_nominal": 0,
             "id": 8,
-            "name": "8 of Spades",
+            "name": "8 of Clubs",
             "nominal": 8,
             "original_value": "8",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
             "times_played": 0,
             "value": "8"
           },
@@ -1836,774 +1071,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 699
+            "playing_card": 319
           },
-          "playing_card": 46,
-          "rank": 24,
+          "playing_card": 7,
+          "rank": 13,
           "save_fields": {
-            "card": "S_8",
+            "card": "C_8",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2689,
+          "sort_id": 432,
           "sprite_facing": "back"
         },
-        "25": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "played_this_ante": true,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Spades",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
-            "times_played": 1,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 701
-          },
-          "playing_card": 48,
-          "rank": 25,
-          "save_fields": {
-            "card": "S_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2691,
-          "sprite_facing": "back"
-        },
-        "26": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.3,
-            "id": 13,
-            "name": "King of Diamonds",
-            "nominal": 10,
-            "original_value": "King",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "King"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 679
-          },
-          "playing_card": 26,
-          "rank": 26,
-          "save_fields": {
-            "card": "D_K",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2669,
-          "sprite_facing": "back"
-        },
-        "27": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 5,
-            "name": "5 of Diamonds",
-            "nominal": 5,
-            "original_value": "5",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "5"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 667
-          },
-          "playing_card": 14,
-          "rank": 27,
-          "save_fields": {
-            "card": "D_5",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2657,
-          "sprite_facing": "back"
-        },
-        "28": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
-              "4": 1
-            },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Clubs",
-            "nominal": 10,
-            "original_value": "Jack",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
-            "times_played": 0,
-            "value": "Jack"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 661
-          },
-          "playing_card": 8,
-          "rank": 28,
-          "save_fields": {
-            "card": "C_J",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2651,
-          "sprite_facing": "back"
-        },
-        "29": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 6,
-            "name": "6 of Spades",
-            "nominal": 6,
-            "original_value": "6",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
-            "times_played": 0,
-            "value": "6"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 698
-          },
-          "playing_card": 45,
-          "rank": 29,
-          "save_fields": {
-            "card": "S_6",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2688,
-          "sprite_facing": "back"
-        },
-        "3": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 3,
-            "name": "3 of Hearts",
-            "nominal": 3,
-            "original_value": "3",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "3"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 685
-          },
-          "playing_card": 32,
-          "rank": 3,
-          "save_fields": {
-            "card": "H_3",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2675,
-          "sprite_facing": "back"
-        },
-        "30": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 5,
-            "name": "5 of Diamonds",
-            "nominal": 5,
-            "original_value": "5",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "5"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 669
-          },
-          "playing_card": 16,
-          "rank": 30,
-          "save_fields": {
-            "card": "D_5",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2659,
-          "sprite_facing": "back"
-        },
-        "31": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 9,
-            "name": "9 of Spades",
-            "nominal": 9,
-            "original_value": "9",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
-            "times_played": 0,
-            "value": "9"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 700
-          },
-          "playing_card": 47,
-          "rank": 31,
-          "save_fields": {
-            "card": "S_9",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2690,
-          "sprite_facing": "back"
-        },
-        "32": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Diamonds",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 681
-          },
-          "playing_card": 28,
-          "rank": 32,
-          "save_fields": {
-            "card": "D_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2671,
-          "sprite_facing": "back"
-        },
-        "33": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 3,
-            "name": "3 of Hearts",
-            "nominal": 3,
-            "original_value": "3",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "3"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 684
-          },
-          "playing_card": 31,
-          "rank": 33,
-          "save_fields": {
-            "card": "H_3",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2674,
-          "sprite_facing": "back"
-        },
-        "34": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Hearts",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 695
-          },
-          "playing_card": 42,
-          "rank": 34,
-          "save_fields": {
-            "card": "H_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2685,
-          "sprite_facing": "back"
-        },
-        "35": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Hearts",
-            "nominal": 10,
-            "original_value": "Jack",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "Jack"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 690
-          },
-          "playing_card": 37,
-          "rank": 35,
-          "save_fields": {
-            "card": "H_J",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2680,
-          "sprite_facing": "back"
-        },
-        "36": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 2,
-            "name": "2 of Clubs",
-            "nominal": 2,
-            "original_value": "2",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
-            "times_played": 0,
-            "value": "2"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 655
-          },
-          "playing_card": 2,
-          "rank": 36,
-          "save_fields": {
-            "card": "C_2",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2645,
-          "sprite_facing": "back"
-        },
-        "37": {
+        "14": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -2649,19 +1129,425 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 696
+            "playing_card": 352
           },
-          "playing_card": 43,
-          "rank": 37,
+          "playing_card": 40,
+          "rank": 14,
           "save_fields": {
             "card": "S_2",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2686,
+          "sort_id": 465,
           "sprite_facing": "back"
         },
-        "38": {
+        "15": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0.1,
+            "id": 11,
+            "name": "Jack of Diamonds",
+            "nominal": 10,
+            "original_value": "Jack",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "Jack"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 335
+          },
+          "playing_card": 23,
+          "rank": 15,
+          "save_fields": {
+            "card": "D_J",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 448,
+          "sprite_facing": "back"
+        },
+        "16": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0.4,
+            "id": 14,
+            "name": "Ace of Clubs",
+            "nominal": 11,
+            "original_value": "Ace",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "Ace"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 321
+          },
+          "playing_card": 9,
+          "rank": 16,
+          "save_fields": {
+            "card": "C_A",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 434,
+          "sprite_facing": "back"
+        },
+        "17": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 2,
+            "name": "2 of Hearts",
+            "nominal": 2,
+            "original_value": "2",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "2"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 339
+          },
+          "playing_card": 27,
+          "rank": 17,
+          "save_fields": {
+            "card": "H_2",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 452,
+          "sprite_facing": "back"
+        },
+        "18": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0.4,
+            "id": 14,
+            "name": "Ace of Hearts",
+            "nominal": 11,
+            "original_value": "Ace",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "Ace"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 347
+          },
+          "playing_card": 35,
+          "rank": 18,
+          "save_fields": {
+            "card": "H_A",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 460,
+          "sprite_facing": "back"
+        },
+        "19": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0.2,
+            "id": 12,
+            "name": "Queen of Spades",
+            "nominal": 10,
+            "original_value": "Queen",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "Queen"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 363
+          },
+          "playing_card": 51,
+          "rank": 19,
+          "save_fields": {
+            "card": "S_Q",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 476,
+          "sprite_facing": "back"
+        },
+        "2": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 10,
+            "name": "10 of Clubs",
+            "nominal": 10,
+            "original_value": "10",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "10"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 325
+          },
+          "playing_card": 13,
+          "rank": 2,
+          "save_fields": {
+            "card": "C_T",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 438,
+          "sprite_facing": "back"
+        },
+        "20": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 9,
+            "name": "9 of Clubs",
+            "nominal": 9,
+            "original_value": "9",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "9"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 320
+          },
+          "playing_card": 8,
+          "rank": 20,
+          "save_fields": {
+            "card": "C_9",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 433,
+          "sprite_facing": "back"
+        },
+        "21": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -2690,15 +1576,15 @@
               "4": 1
             },
             "face_nominal": 0,
-            "id": 3,
-            "name": "3 of Diamonds",
-            "nominal": 3,
-            "original_value": "3",
+            "id": 6,
+            "name": "6 of Diamonds",
+            "nominal": 6,
+            "original_value": "6",
             "suit": "Diamonds",
             "suit_nominal": 0.01,
             "suit_nominal_original": 0.001,
             "times_played": 0,
-            "value": "3"
+            "value": "6"
           },
           "base_cost": 1,
           "cost": 1,
@@ -2707,16 +1593,1060 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 665
+            "playing_card": 330
           },
-          "playing_card": 12,
-          "rank": 38,
+          "playing_card": 18,
+          "rank": 21,
           "save_fields": {
-            "card": "D_3",
+            "card": "D_6",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2655,
+          "sort_id": 443,
+          "sprite_facing": "back"
+        },
+        "22": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 7,
+            "name": "7 of Hearts",
+            "nominal": 7,
+            "original_value": "7",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "7"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 344
+          },
+          "playing_card": 32,
+          "rank": 22,
+          "save_fields": {
+            "card": "H_7",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 457,
+          "sprite_facing": "back"
+        },
+        "23": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 2,
+            "name": "2 of Diamonds",
+            "nominal": 2,
+            "original_value": "2",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "2"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 326
+          },
+          "playing_card": 14,
+          "rank": 23,
+          "save_fields": {
+            "card": "D_2",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 439,
+          "sprite_facing": "back"
+        },
+        "24": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 8,
+            "name": "8 of Diamonds",
+            "nominal": 8,
+            "original_value": "8",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "8"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 332
+          },
+          "playing_card": 20,
+          "rank": 24,
+          "save_fields": {
+            "card": "D_8",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 445,
+          "sprite_facing": "back"
+        },
+        "25": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0.3,
+            "id": 13,
+            "name": "King of Hearts",
+            "nominal": 10,
+            "original_value": "King",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "King"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 349
+          },
+          "playing_card": 37,
+          "rank": 25,
+          "save_fields": {
+            "card": "H_K",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 462,
+          "sprite_facing": "back"
+        },
+        "26": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0.2,
+            "id": 12,
+            "name": "Queen of Clubs",
+            "nominal": 10,
+            "original_value": "Queen",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "Queen"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 324
+          },
+          "playing_card": 12,
+          "rank": 26,
+          "save_fields": {
+            "card": "C_Q",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 437,
+          "sprite_facing": "back"
+        },
+        "27": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 5,
+            "name": "5 of Hearts",
+            "nominal": 5,
+            "original_value": "5",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "5"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 342
+          },
+          "playing_card": 30,
+          "rank": 27,
+          "save_fields": {
+            "card": "H_5",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 455,
+          "sprite_facing": "back"
+        },
+        "28": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 9,
+            "name": "9 of Hearts",
+            "nominal": 9,
+            "original_value": "9",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "9"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 346
+          },
+          "playing_card": 34,
+          "rank": 28,
+          "save_fields": {
+            "card": "H_9",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 459,
+          "sprite_facing": "back"
+        },
+        "29": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0.1,
+            "id": 11,
+            "name": "Jack of Clubs",
+            "nominal": 10,
+            "original_value": "Jack",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "Jack"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 322
+          },
+          "playing_card": 10,
+          "rank": 29,
+          "save_fields": {
+            "card": "C_J",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 435,
+          "sprite_facing": "back"
+        },
+        "3": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 10,
+            "name": "10 of Diamonds",
+            "nominal": 10,
+            "original_value": "10",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "10"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 338
+          },
+          "playing_card": 26,
+          "rank": 3,
+          "save_fields": {
+            "card": "D_T",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 451,
+          "sprite_facing": "back"
+        },
+        "30": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 9,
+            "name": "9 of Diamonds",
+            "nominal": 9,
+            "original_value": "9",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "9"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 333
+          },
+          "playing_card": 21,
+          "rank": 30,
+          "save_fields": {
+            "card": "D_9",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 446,
+          "sprite_facing": "back"
+        },
+        "31": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 10,
+            "name": "10 of Hearts",
+            "nominal": 10,
+            "original_value": "10",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "10"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 351
+          },
+          "playing_card": 39,
+          "rank": 31,
+          "save_fields": {
+            "card": "H_T",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 464,
+          "sprite_facing": "back"
+        },
+        "32": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 4,
+            "name": "4 of Clubs",
+            "nominal": 4,
+            "original_value": "4",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "4"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 315
+          },
+          "playing_card": 3,
+          "rank": 32,
+          "save_fields": {
+            "card": "C_4",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 428,
+          "sprite_facing": "back"
+        },
+        "33": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 4,
+            "name": "4 of Diamonds",
+            "nominal": 4,
+            "original_value": "4",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "4"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 328
+          },
+          "playing_card": 16,
+          "rank": 33,
+          "save_fields": {
+            "card": "D_4",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 441,
+          "sprite_facing": "back"
+        },
+        "34": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 5,
+            "name": "5 of Clubs",
+            "nominal": 5,
+            "original_value": "5",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "5"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 316
+          },
+          "playing_card": 4,
+          "rank": 34,
+          "save_fields": {
+            "card": "C_5",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 429,
+          "sprite_facing": "back"
+        },
+        "35": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0.4,
+            "id": 14,
+            "name": "Ace of Spades",
+            "nominal": 11,
+            "original_value": "Ace",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "Ace"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 360
+          },
+          "playing_card": 48,
+          "rank": 35,
+          "save_fields": {
+            "card": "S_A",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 473,
+          "sprite_facing": "back"
+        },
+        "36": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 6,
+            "name": "6 of Spades",
+            "nominal": 6,
+            "original_value": "6",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "6"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 356
+          },
+          "playing_card": 44,
+          "rank": 36,
+          "save_fields": {
+            "card": "S_6",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 469,
+          "sprite_facing": "back"
+        },
+        "37": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0.2,
+            "id": 12,
+            "name": "Queen of Diamonds",
+            "nominal": 10,
+            "original_value": "Queen",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "Queen"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 337
+          },
+          "playing_card": 25,
+          "rank": 37,
+          "save_fields": {
+            "card": "D_Q",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 450,
+          "sprite_facing": "back"
+        },
+        "38": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 8,
+            "name": "8 of Spades",
+            "nominal": 8,
+            "original_value": "8",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "8"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 358
+          },
+          "playing_card": 46,
+          "rank": 38,
+          "save_fields": {
+            "card": "S_8",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 471,
           "sprite_facing": "back"
         },
         "39": {
@@ -2765,16 +2695,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 659
+            "playing_card": 314
           },
-          "playing_card": 6,
+          "playing_card": 2,
           "rank": 39,
           "save_fields": {
             "card": "C_3",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2649,
+          "sort_id": 427,
           "sprite_facing": "back"
         },
         "4": {
@@ -2800,21 +2730,21 @@
           },
           "base": {
             "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
               "4": 1
             },
-            "face_nominal": 0,
-            "id": 2,
-            "name": "2 of Clubs",
-            "nominal": 2,
-            "original_value": "2",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
+            "face_nominal": 0.1,
+            "id": 11,
+            "name": "Jack of Spades",
+            "nominal": 10,
+            "original_value": "Jack",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
             "times_played": 0,
-            "value": "2"
+            "value": "Jack"
           },
           "base_cost": 1,
           "cost": 1,
@@ -2823,16 +2753,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 656
+            "playing_card": 361
           },
-          "playing_card": 3,
+          "playing_card": 49,
           "rank": 4,
           "save_fields": {
-            "card": "C_2",
+            "card": "S_J",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2646,
+          "sort_id": 474,
           "sprite_facing": "back"
         },
         "40": {
@@ -2858,21 +2788,21 @@
           },
           "base": {
             "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
               "4": 1
             },
             "face_nominal": 0,
-            "id": 3,
-            "name": "3 of Hearts",
-            "nominal": 3,
-            "original_value": "3",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
+            "id": 4,
+            "name": "4 of Spades",
+            "nominal": 4,
+            "original_value": "4",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
             "times_played": 0,
-            "value": "3"
+            "value": "4"
           },
           "base_cost": 1,
           "cost": 1,
@@ -2881,16 +2811,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 683
+            "playing_card": 354
           },
-          "playing_card": 30,
+          "playing_card": 42,
           "rank": 40,
           "save_fields": {
-            "card": "H_3",
+            "card": "S_4",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2673,
+          "sort_id": 467,
           "sprite_facing": "back"
         },
         "41": {
@@ -2916,21 +2846,21 @@
           },
           "base": {
             "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
               "4": 1
             },
             "face_nominal": 0,
-            "id": 5,
-            "name": "5 of Diamonds",
-            "nominal": 5,
-            "original_value": "5",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
+            "id": 9,
+            "name": "9 of Spades",
+            "nominal": 9,
+            "original_value": "9",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
             "times_played": 0,
-            "value": "5"
+            "value": "9"
           },
           "base_cost": 1,
           "cost": 1,
@@ -2939,16 +2869,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 666
+            "playing_card": 359
           },
-          "playing_card": 13,
+          "playing_card": 47,
           "rank": 41,
           "save_fields": {
-            "card": "D_5",
+            "card": "S_9",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2656,
+          "sort_id": 472,
           "sprite_facing": "back"
         },
         "42": {
@@ -2980,15 +2910,15 @@
               "4": 1
             },
             "face_nominal": 0,
-            "id": 4,
-            "name": "4 of Hearts",
-            "nominal": 4,
-            "original_value": "4",
+            "id": 6,
+            "name": "6 of Hearts",
+            "nominal": 6,
+            "original_value": "6",
             "suit": "Hearts",
             "suit_nominal": 0.03,
             "suit_nominal_original": 0.003,
             "times_played": 0,
-            "value": "4"
+            "value": "6"
           },
           "base_cost": 1,
           "cost": 1,
@@ -2997,16 +2927,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 686
+            "playing_card": 343
           },
-          "playing_card": 33,
+          "playing_card": 31,
           "rank": 42,
           "save_fields": {
-            "card": "H_4",
+            "card": "H_6",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2676,
+          "sort_id": 456,
           "sprite_facing": "back"
         },
         "43": {
@@ -3032,21 +2962,21 @@
           },
           "base": {
             "colour": {
-              "1": 0,
-              "2": 0.5568627451,
-              "3": 0.9019607843,
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
               "4": 1
             },
             "face_nominal": 0,
-            "id": 2,
-            "name": "2 of Clubs",
-            "nominal": 2,
-            "original_value": "2",
-            "suit": "Clubs",
-            "suit_nominal": 0.02,
-            "suit_nominal_original": 0.002,
+            "id": 3,
+            "name": "3 of Diamonds",
+            "nominal": 3,
+            "original_value": "3",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
             "times_played": 0,
-            "value": "2"
+            "value": "3"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3055,16 +2985,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 657
+            "playing_card": 327
           },
-          "playing_card": 4,
+          "playing_card": 15,
           "rank": 43,
           "save_fields": {
-            "card": "C_2",
+            "card": "D_3",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2647,
+          "sort_id": 440,
           "sprite_facing": "back"
         },
         "44": {
@@ -3095,16 +3025,16 @@
               "3": 0,
               "4": 1
             },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Diamonds",
+            "face_nominal": 0.3,
+            "id": 13,
+            "name": "King of Diamonds",
             "nominal": 10,
-            "original_value": "Jack",
+            "original_value": "King",
             "suit": "Diamonds",
             "suit_nominal": 0.01,
             "suit_nominal_original": 0.001,
             "times_played": 0,
-            "value": "Jack"
+            "value": "King"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3113,16 +3043,16 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 676
+            "playing_card": 336
           },
-          "playing_card": 23,
+          "playing_card": 24,
           "rank": 44,
           "save_fields": {
-            "card": "D_J",
+            "card": "D_K",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2666,
+          "sort_id": 449,
           "sprite_facing": "back"
         },
         "45": {
@@ -3154,15 +3084,15 @@
               "4": 1
             },
             "face_nominal": 0,
-            "id": 3,
-            "name": "3 of Clubs",
-            "nominal": 3,
-            "original_value": "3",
+            "id": 6,
+            "name": "6 of Clubs",
+            "nominal": 6,
+            "original_value": "6",
             "suit": "Clubs",
             "suit_nominal": 0.02,
             "suit_nominal_original": 0.002,
             "times_played": 0,
-            "value": "3"
+            "value": "6"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3171,78 +3101,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 658
+            "playing_card": 317
           },
           "playing_card": 5,
           "rank": 45,
           "save_fields": {
-            "card": "C_3",
+            "card": "C_6",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2648,
+          "sort_id": 430,
           "sprite_facing": "back"
         },
         "46": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "played_this_ante": true,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Hearts",
-            "nominal": 10,
-            "original_value": "Jack",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 1,
-            "value": "Jack"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 691
-          },
-          "playing_card": 38,
-          "rank": 46,
-          "save_fields": {
-            "card": "H_J",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2681,
-          "sprite_facing": "back"
-        },
-        "47": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -3288,16 +3159,74 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 697
+            "playing_card": 355
           },
-          "playing_card": 44,
-          "rank": 47,
+          "playing_card": 43,
+          "rank": 46,
           "save_fields": {
             "card": "S_5",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2687,
+          "sort_id": 468,
+          "sprite_facing": "back"
+        },
+        "47": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0,
+              "2": 0.5568627451,
+              "3": 0.9019607843,
+              "4": 1
+            },
+            "face_nominal": 0.3,
+            "id": 13,
+            "name": "King of Clubs",
+            "nominal": 10,
+            "original_value": "King",
+            "suit": "Clubs",
+            "suit_nominal": 0.02,
+            "suit_nominal_original": 0.002,
+            "times_played": 0,
+            "value": "King"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 323
+          },
+          "playing_card": 11,
+          "rank": 47,
+          "save_fields": {
+            "card": "C_K",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 436,
           "sprite_facing": "back"
         },
         "48": {
@@ -3329,15 +3258,15 @@
               "4": 1
             },
             "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Spades",
-            "nominal": 10,
-            "original_value": "10",
+            "id": 3,
+            "name": "3 of Spades",
+            "nominal": 3,
+            "original_value": "3",
             "suit": "Spades",
             "suit_nominal": 0.04,
             "suit_nominal_original": 0.004,
             "times_played": 0,
-            "value": "10"
+            "value": "3"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3346,77 +3275,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 703
+            "playing_card": 353
           },
-          "playing_card": 50,
+          "playing_card": 41,
           "rank": 48,
           "save_fields": {
-            "card": "S_T",
+            "card": "S_3",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2693,
+          "sort_id": 466,
           "sprite_facing": "back"
         },
         "49": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0.2,
-            "id": 12,
-            "name": "Queen of Diamonds",
-            "nominal": 10,
-            "original_value": "Queen",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "Queen"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 680
-          },
-          "playing_card": 27,
-          "rank": 49,
-          "save_fields": {
-            "card": "D_Q",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2670,
-          "sprite_facing": "back"
-        },
-        "5": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -3444,16 +3315,16 @@
               "3": 0.1843137255,
               "4": 1
             },
-            "face_nominal": 0,
-            "id": 8,
-            "name": "8 of Hearts",
-            "nominal": 8,
-            "original_value": "8",
+            "face_nominal": 0.1,
+            "id": 11,
+            "name": "Jack of Hearts",
+            "nominal": 10,
+            "original_value": "Jack",
             "suit": "Hearts",
             "suit_nominal": 0.03,
             "suit_nominal_original": 0.003,
             "times_played": 0,
-            "value": "8"
+            "value": "Jack"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3462,16 +3333,74 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 687
+            "playing_card": 348
           },
-          "playing_card": 34,
-          "rank": 5,
+          "playing_card": 36,
+          "rank": 49,
           "save_fields": {
-            "card": "H_8",
+            "card": "H_J",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2677,
+          "sort_id": 461,
+          "sprite_facing": "back"
+        },
+        "5": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0.3,
+            "id": 13,
+            "name": "King of Spades",
+            "nominal": 10,
+            "original_value": "King",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "King"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 362
+          },
+          "playing_card": 50,
+          "rank": 5,
+          "save_fields": {
+            "card": "S_K",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 475,
           "sprite_facing": "back"
         },
         "50": {
@@ -3502,16 +3431,16 @@
               "3": 0,
               "4": 1
             },
-            "face_nominal": 0.1,
-            "id": 11,
-            "name": "Jack of Diamonds",
-            "nominal": 10,
-            "original_value": "Jack",
+            "face_nominal": 0,
+            "id": 7,
+            "name": "7 of Diamonds",
+            "nominal": 7,
+            "original_value": "7",
             "suit": "Diamonds",
             "suit_nominal": 0.01,
             "suit_nominal_original": 0.001,
             "times_played": 0,
-            "value": "Jack"
+            "value": "7"
           },
           "base_cost": 1,
           "cost": 1,
@@ -3520,310 +3449,19 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 674
+            "playing_card": 331
           },
-          "playing_card": 21,
+          "playing_card": 19,
           "rank": 50,
           "save_fields": {
-            "card": "D_J",
+            "card": "D_7",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2664,
+          "sort_id": 444,
           "sprite_facing": "back"
         },
         "51": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "played_this_ante": true,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
-              "4": 1
-            },
-            "face_nominal": 0.2,
-            "id": 12,
-            "name": "Queen of Spades",
-            "nominal": 10,
-            "original_value": "Queen",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
-            "times_played": 1,
-            "value": "Queen"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 702
-          },
-          "playing_card": 49,
-          "rank": 51,
-          "save_fields": {
-            "card": "S_Q",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2692,
-          "sprite_facing": "back"
-        },
-        "52": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 8,
-            "name": "8 of Diamonds",
-            "nominal": 8,
-            "original_value": "8",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "8"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 672
-          },
-          "playing_card": 19,
-          "rank": 52,
-          "save_fields": {
-            "card": "D_8",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2662,
-          "sprite_facing": "back"
-        },
-        "6": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.9725490196,
-              "2": 0.231372549,
-              "3": 0.1843137255,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Hearts",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Hearts",
-            "suit_nominal": 0.03,
-            "suit_nominal_original": 0.003,
-            "times_played": 0,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 694
-          },
-          "playing_card": 41,
-          "rank": 6,
-          "save_fields": {
-            "card": "H_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2684,
-          "sprite_facing": "back"
-        },
-        "7": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.3098039216,
-              "2": 0.1921568627,
-              "3": 0.7254901961,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 10,
-            "name": "10 of Spades",
-            "nominal": 10,
-            "original_value": "10",
-            "suit": "Spades",
-            "suit_nominal": 0.04,
-            "suit_nominal_original": 0.004,
-            "times_played": 0,
-            "value": "10"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 705
-          },
-          "playing_card": 52,
-          "rank": 7,
-          "save_fields": {
-            "card": "S_T",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2695,
-          "sprite_facing": "back"
-        },
-        "8": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Base",
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 0,
-            "mult": 0,
-            "name": "Default Base",
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Default",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "colour": {
-              "1": 0.8862745098,
-              "2": 0.5647058824,
-              "3": 0,
-              "4": 1
-            },
-            "face_nominal": 0,
-            "id": 6,
-            "name": "6 of Diamonds",
-            "nominal": 6,
-            "original_value": "6",
-            "suit": "Diamonds",
-            "suit_nominal": 0.01,
-            "suit_nominal_original": 0.001,
-            "times_played": 0,
-            "value": "6"
-          },
-          "base_cost": 1,
-          "cost": 1,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "back",
-          "label": "Base Card",
-          "params": {
-            "playing_card": 671
-          },
-          "playing_card": 18,
-          "rank": 8,
-          "save_fields": {
-            "card": "D_6",
-            "center": "c_base"
-          },
-          "sell_cost": 1,
-          "sort_id": 2661,
-          "sprite_facing": "back"
-        },
-        "9": {
           "ability": {
             "bonus": 0,
             "d_size": 0,
@@ -3869,16 +3507,306 @@
           "facing": "back",
           "label": "Base Card",
           "params": {
-            "playing_card": 654
+            "playing_card": 313
           },
           "playing_card": 1,
-          "rank": 9,
+          "rank": 51,
           "save_fields": {
             "card": "C_2",
             "center": "c_base"
           },
           "sell_cost": 1,
-          "sort_id": 2644,
+          "sort_id": 426,
+          "sprite_facing": "back"
+        },
+        "52": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 5,
+            "name": "5 of Diamonds",
+            "nominal": 5,
+            "original_value": "5",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "5"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 329
+          },
+          "playing_card": 17,
+          "rank": 52,
+          "save_fields": {
+            "card": "D_5",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 442,
+          "sprite_facing": "back"
+        },
+        "6": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.3098039216,
+              "2": 0.1921568627,
+              "3": 0.7254901961,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 7,
+            "name": "7 of Spades",
+            "nominal": 7,
+            "original_value": "7",
+            "suit": "Spades",
+            "suit_nominal": 0.04,
+            "suit_nominal_original": 0.004,
+            "times_played": 0,
+            "value": "7"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 357
+          },
+          "playing_card": 45,
+          "rank": 6,
+          "save_fields": {
+            "card": "S_7",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 470,
+          "sprite_facing": "back"
+        },
+        "7": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.8862745098,
+              "2": 0.5647058824,
+              "3": 0,
+              "4": 1
+            },
+            "face_nominal": 0.4,
+            "id": 14,
+            "name": "Ace of Diamonds",
+            "nominal": 11,
+            "original_value": "Ace",
+            "suit": "Diamonds",
+            "suit_nominal": 0.01,
+            "suit_nominal_original": 0.001,
+            "times_played": 0,
+            "value": "Ace"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 334
+          },
+          "playing_card": 22,
+          "rank": 7,
+          "save_fields": {
+            "card": "D_A",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 447,
+          "sprite_facing": "back"
+        },
+        "8": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 8,
+            "name": "8 of Hearts",
+            "nominal": 8,
+            "original_value": "8",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "8"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 345
+          },
+          "playing_card": 33,
+          "rank": 8,
+          "save_fields": {
+            "card": "H_8",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 458,
+          "sprite_facing": "back"
+        },
+        "9": {
+          "ability": {
+            "bonus": 0,
+            "d_size": 0,
+            "effect": "Base",
+            "extra_value": 0,
+            "h_dollars": 0,
+            "h_mult": 0,
+            "h_size": 0,
+            "h_x_mult": 0,
+            "hands_played_at_create": 0,
+            "mult": 0,
+            "name": "Default Base",
+            "p_dollars": 0,
+            "perma_bonus": 0,
+            "set": "Default",
+            "t_chips": 0,
+            "t_mult": 0,
+            "type": "",
+            "x_mult": 1
+          },
+          "base": {
+            "colour": {
+              "1": 0.9725490196,
+              "2": 0.231372549,
+              "3": 0.1843137255,
+              "4": 1
+            },
+            "face_nominal": 0,
+            "id": 3,
+            "name": "3 of Hearts",
+            "nominal": 3,
+            "original_value": "3",
+            "suit": "Hearts",
+            "suit_nominal": 0.03,
+            "suit_nominal_original": 0.003,
+            "times_played": 0,
+            "value": "3"
+          },
+          "base_cost": 1,
+          "cost": 1,
+          "debuff": false,
+          "extra_cost": 0,
+          "facing": "back",
+          "label": "Base Card",
+          "params": {
+            "playing_card": 340
+          },
+          "playing_card": 28,
+          "rank": 9,
+          "save_fields": {
+            "card": "H_3",
+            "center": "c_base"
+          },
+          "sell_cost": 1,
+          "sort_id": 453,
           "sprite_facing": "back"
         }
       },
@@ -3939,304 +3867,6 @@
         "sort": "desc",
         "temp_limit": 5,
         "type": "play"
-      }
-    },
-    "shop_booster": {
-      "cards": {
-        "1": {
-          "ability": {
-            "bonus": 0,
-            "booster_pos": 1,
-            "d_size": 0,
-            "extra": 2,
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 1,
-            "mult": 0,
-            "name": "Buffoon Pack",
-            "order": 26,
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Booster",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "face_nominal": 0,
-            "nominal": 0,
-            "suit_nominal": 0,
-            "times_played": 0
-          },
-          "base_cost": 4,
-          "bypass_discovery_center": true,
-          "bypass_discovery_ui": true,
-          "cost": 4,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "front",
-          "label": "Buffoon Pack",
-          "params": {
-            "bypass_discovery_center": true,
-            "bypass_discovery_ui": true
-          },
-          "rank": 1,
-          "save_fields": {
-            "center": "p_buffoon_normal_2"
-          },
-          "sell_cost": 2,
-          "sort_id": 2699,
-          "sprite_facing": "front"
-        },
-        "2": {
-          "ability": {
-            "bonus": 0,
-            "booster_pos": 2,
-            "d_size": 0,
-            "extra": 3,
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 1,
-            "mult": 0,
-            "name": "Standard Pack",
-            "order": 18,
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Booster",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "face_nominal": 0,
-            "nominal": 0,
-            "suit_nominal": 0,
-            "times_played": 0
-          },
-          "base_cost": 4,
-          "bypass_discovery_center": true,
-          "bypass_discovery_ui": true,
-          "cost": 4,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "front",
-          "label": "Standard Pack",
-          "params": {
-            "bypass_discovery_center": true,
-            "bypass_discovery_ui": true
-          },
-          "rank": 2,
-          "save_fields": {
-            "center": "p_standard_normal_2"
-          },
-          "sell_cost": 2,
-          "sort_id": 2700,
-          "sprite_facing": "front"
-        }
-      },
-      "config": {
-        "card_count": 2,
-        "card_limit": 2,
-        "card_w": 2.60195122,
-        "highlight_limit": 1,
-        "highlighted_limit": 1,
-        "lr_padding": 0.1,
-        "refresh_movement": true,
-        "sort": "desc",
-        "temp_limit": 2,
-        "type": "shop"
-      }
-    },
-    "shop_jokers": {
-      "cards": {
-        "1": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "effect": "Upgrade Hand chance",
-            "extra": 4,
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 1,
-            "mult": 0,
-            "name": "Space Joker",
-            "order": 45,
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Joker",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "face_nominal": 0,
-            "nominal": 0,
-            "suit_nominal": 0,
-            "times_played": 0
-          },
-          "base_cost": 5,
-          "bypass_discovery_center": true,
-          "bypass_discovery_ui": true,
-          "cost": 5,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "front",
-          "label": "Space Joker",
-          "params": {
-            "bypass_back": {
-              "x": 2,
-              "y": 3
-            },
-            "bypass_discovery_center": true,
-            "bypass_discovery_ui": true,
-            "discover": false
-          },
-          "rank": 1,
-          "save_fields": {
-            "center": "j_space"
-          },
-          "sell_cost": 2,
-          "sort_id": 2696,
-          "sprite_facing": "front"
-        },
-        "2": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 1,
-            "mult": 0,
-            "name": "Luchador",
-            "order": 77,
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Joker",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "face_nominal": 0,
-            "nominal": 0,
-            "suit_nominal": 0,
-            "times_played": 0
-          },
-          "base_cost": 5,
-          "bypass_discovery_center": true,
-          "bypass_discovery_ui": true,
-          "cost": 5,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "front",
-          "label": "Luchador",
-          "params": {
-            "bypass_back": {
-              "x": 2,
-              "y": 3
-            },
-            "bypass_discovery_center": true,
-            "bypass_discovery_ui": true,
-            "discover": false
-          },
-          "rank": 2,
-          "save_fields": {
-            "center": "j_luchador"
-          },
-          "sell_cost": 2,
-          "sort_id": 2697,
-          "sprite_facing": "front"
-        }
-      },
-      "config": {
-        "card_count": 2,
-        "card_limit": 2,
-        "highlight_limit": 1,
-        "highlighted_limit": 1,
-        "lr_padding": 0.1,
-        "refresh_movement": true,
-        "sort": "desc",
-        "temp_limit": 2,
-        "type": "shop"
-      }
-    },
-    "shop_vouchers": {
-      "cards": {
-        "1": {
-          "ability": {
-            "bonus": 0,
-            "d_size": 0,
-            "extra": 2,
-            "extra_value": 0,
-            "h_dollars": 0,
-            "h_mult": 0,
-            "h_size": 0,
-            "h_x_mult": 0,
-            "hands_played_at_create": 1,
-            "mult": 0,
-            "name": "Reroll Surplus",
-            "order": 7,
-            "p_dollars": 0,
-            "perma_bonus": 0,
-            "set": "Voucher",
-            "t_chips": 0,
-            "t_mult": 0,
-            "type": "",
-            "x_mult": 1
-          },
-          "base": {
-            "face_nominal": 0,
-            "nominal": 0,
-            "suit_nominal": 0,
-            "times_played": 0
-          },
-          "base_cost": 10,
-          "bypass_discovery_center": true,
-          "bypass_discovery_ui": true,
-          "cost": 10,
-          "debuff": false,
-          "extra_cost": 0,
-          "facing": "front",
-          "label": "Reroll Surplus",
-          "params": {
-            "bypass_discovery_center": true,
-            "bypass_discovery_ui": true
-          },
-          "rank": 1,
-          "save_fields": {
-            "center": "v_reroll_surplus"
-          },
-          "sell_cost": 5,
-          "sort_id": 2698,
-          "sprite_facing": "front"
-        }
-      },
-      "config": {
-        "card_count": 1,
-        "card_limit": 1,
-        "highlight_limit": 1,
-        "highlighted_limit": 1,
-        "lr_padding": 0.1,
-        "refresh_movement": true,
-        "sort": "desc",
-        "temp_limit": 1,
-        "type": "shop"
       }
     }
   },
