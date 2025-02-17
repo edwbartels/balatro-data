@@ -12,8 +12,12 @@ router = APIRouter(prefix="/jokers", tags=["jokers"])
 @router.get("/")
 def get_all_jokers(db: Session = Depends(get_db)):
     jokers = db.query(Joker).all()
+    result = {}
 
-    return jokers
+    for joker in jokers:
+        result[joker.id] = joker
+
+    return result
 
 
 @router.get("/{joker_id}")
