@@ -24,14 +24,15 @@ def new_run(data) -> None:
     )
 
     if existing_run:
-        if "rounds" not in existing_run.keys():
+        if len(existing_run.rounds) < 1:
             return
 
-    previous_run = session.query(Run).order_by(desc(Run.created_at)).first()
+    previous_run = session.query(Run).order_by(desc(Run.created)).first()
+    print(previous_run)
 
     if previous_run:
-        if "rounds" in previous_run.keys():
-            previous_run.completed = True
+        if len(previous_run.rounds) > 0:
+            previous_run.complete = True
 
             joker_ids = (
                 session.query(Joker.id)
