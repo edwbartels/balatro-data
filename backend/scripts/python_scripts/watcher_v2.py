@@ -10,6 +10,7 @@ from pathlib import Path
 from app.util.process_change import process_change
 from app.util.process_save_json import process_save_file
 from app.util.db_inserts import update_db
+from app.util.db_updates import update_win
 
 
 @dataclass
@@ -115,6 +116,8 @@ class StateWatcher:
                     )
                     print("changes", changes.items())
                     filtered_save = process_save_file(new_state)
+                    if "won" in changes.keys():
+                        update_win(filtered_save)
                     update_db(filtered_save)
                     # print(filtered_save)
                     # for field, (old_val, new_val) in changes.items():

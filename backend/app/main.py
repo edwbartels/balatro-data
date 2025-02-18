@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import rounds, runs, jokers
+from app.api import rounds, runs, jokers, decks
 
 import os
 
@@ -22,5 +22,6 @@ api_router = APIRouter(prefix="/api")
 api_router.include_router(runs.router)
 api_router.include_router(rounds.router)
 api_router.include_router(jokers.router)
+api_router.include_router(decks.router)
 
 app.include_router(api_router)

@@ -32,7 +32,7 @@ def get_db():
 def create_tables():
     from app.database.models.jokers import Joker
     from app.database.models.bosses import Boss
-    from app.database.models.decks import Deck
+    from app.database.models.decks import Deck, DeckStakeStats
     from app.database.models.editions import Edition
     from app.database.models.packs import Pack
     from app.database.models.planets import Planet

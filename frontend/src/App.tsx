@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom'
 import './App.css'
 import Jokers from './components/Jokers/Jokers'
+import Decks from './components/Decks/Decks'
+import HomePage from './components/HomePage/HomePage'
 
 const Layout = () => {
 	return (
@@ -18,7 +20,7 @@ const Layout = () => {
 const router = createBrowserRouter([
 	{
 		element: <Layout />,
-		children: [{ path: '/', element: <Jokers /> }],
+		children: [{ path: '/', element: <HomePage /> }],
 	},
 ])
 const App = () => {

@@ -1,7 +1,8 @@
-from sqlalchemy import select, desc
+from sqlalchemy import select, desc, func
 from sqlalchemy.orm import Session
 from app.database.main import SessionLocal
 from app.database.models.runs import Run
+from app.database.models.decks import Deck, DeckStakeStats
 from app.database.models.rounds import Round, round_joker_instances
 from app.database.models.jokers import JokerInstance, Joker
 
@@ -9,6 +10,7 @@ from app.database.models.jokers import JokerInstance, Joker
 def update_db(data) -> None:
     # print(data.GAME)
     # print(data.cardAreas)
+
     if data.GAME.round == 0:
         new_run(data)
     else:
@@ -17,23 +19,46 @@ def update_db(data) -> None:
 
 def new_run(data) -> None:
     session: Session = SessionLocal()
-    hashed_id = data.GAME.pseudorandom.hashed_seed
+    try:
+        hashed_id = data.GAME.pseudorandom.hashed_seed
 
-    existing_run: Run | None = (
-        session.query(Run).filter(Run.hashed_seed == hashed_id).first()
-    )
+        # Check for existing run with this seed
+        existing_run: Run | None = (
+            session.query(Run).filter(Run.hashed_seed == hashed_id).first()
+        )
 
-    if existing_run:
-        if len(existing_run.rounds) < 1:
+        # Check for rounds. If none, assume existing == new and return without adding
+        if existing_run and len(existing_run.rounds < 1):
+            # if len(existing_run.rounds) < 1:
             return
 
-    previous_run = session.query(Run).order_by(desc(Run.created)).first()
-    print(previous_run)
+        # Get previous run
+        previous_run = (
+            session.query(Run)
+            .filter(not Run.complete)
+            .order_by(desc(Run.created))
+            .first()
+        )
 
-    if previous_run:
-        if len(previous_run.rounds) > 0:
+        if previous_run and previous_run.rounds > 0:
+            # if len(previous_run.rounds) > 0:
+
+            # Calculate and set max ante, toggle complete to true
+            max_ante = (
+                session.query(func.max(Round.ante))
+                .filter(Round.run_id == previous_run.id)
+                .scalar()
+            )
             previous_run.complete = True
+            previous_run.max_ante = max_ante
 
+            # Update deck/stake win rates
+            DeckStakeStats.update_stake_win_rates(
+                session, previous_run.deck_id, previous_run.stake
+            )
+            Deck.update_win_rate(session, previous_run.deck_id)
+
+            # Get Jokers and update win rates
             joker_ids = (
                 session.query(Joker.id)
                 .join(JokerInstance, Joker.instances)
@@ -47,20 +72,18 @@ def new_run(data) -> None:
             for (joker_id,) in joker_ids:
                 Joker.update_win_rate(session, joker_id)
 
-    deck_id = data.BACK.key
-    # deck = session.query(Deck).filter(Deck.id == deck_id).first()
-    new_run = Run(
-        hashed_seed=hashed_id,
-        seed=data.GAME.pseudorandom.seed,
-        stake=data.GAME.stake,
-        deck_id=deck_id,
-    )
+        new_run = Run(
+            hashed_seed=hashed_id,
+            seed=data.GAME.pseudorandom.seed,
+            stake=data.GAME.stake,
+            deck_id=data.BACK.key,
+        )
 
-    session.add(new_run)
-    session.commit()
-    session.refresh(new_run)
-
-    return
+        session.add(new_run)
+        session.commit()
+        session.refresh(new_run)
+    finally:
+        session.close()
 
 
 def new_round(data) -> None:

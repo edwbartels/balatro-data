@@ -1,5 +1,5 @@
 from sqlalchemy import ForeignKey, Integer, Boolean, Float, String
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, column_property, mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 from app.database.main import Base
 from app.database.models.mixins import TimestampMixin
@@ -21,6 +21,7 @@ class Run(Base, TimestampMixin):
     complete: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     win: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     stake: Mapped[int] = mapped_column(Integer, nullable=False)
+    max_ante: Mapped[int] = mapped_column(Integer, server_default="0", nullable=False)
 
     # rounds = relationship("Round", back_populates="run")
     # deck = relationship("Deck", back_populates="runs")
