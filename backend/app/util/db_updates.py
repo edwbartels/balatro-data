@@ -25,8 +25,8 @@ def update_win(session, data):
         .first()
     )
     run.win = data.GAME.won
-    Deck.update_win_rate(session, data.BACK.key)
-    DeckStakeStats.update_stake_win_rates(session, data.BACK.key, data.GAME.stake)
+    Deck.update_stats(session, data.BACK.key)
+    DeckStakeStats.update_stats(session, data.BACK.key, data.GAME.stake)
 
     cards = data.cardAreas.jokers.cards
     for card in cards:
@@ -65,8 +65,8 @@ def update_all_deck_stake_win_rates(session):
 
     for deck in decks:
         for stake in range(1, 9):
-            DeckStakeStats.update_stake_win_rates(session, deck.id, stake)
-        Deck.update_win_rate(session, deck.id)
+            DeckStakeStats.update_stats(session, deck.id, stake)
+        Deck.update_stats(session, deck.id)
 
 
 # def update_overall_deck_rates(session):

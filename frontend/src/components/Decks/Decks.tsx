@@ -49,11 +49,17 @@ const Decks: React.FC = () => {
 						</div>
 					))}
 			</div>
-
-			<div className="text-md">{`${activeDeck.name} - Overall: ${toPercent(
+			<div className="text-lg font-bold">{activeDeck.name}</div>
+			<div className="text-md mb-4 border-b-2">{`Win-Rate: ${toPercent(
 				activeDeck?.win_rate
 			)}`}</div>
-			{activeDeck && <LineChartComponent deck={activeDeck} />}
+			{activeDeck && (
+				<LineChartComponent deck={activeDeck} yOption={'winRate'} />
+			)}
+			<div className="text-md mb-4 border-b-2 mt-4">{`Average Final Ante: ${activeDeck?.avg_max_ante.toFixed(
+				1
+			)}`}</div>
+			{activeDeck && <LineChartComponent deck={activeDeck} yOption={'ante'} />}
 		</div>
 	)
 }

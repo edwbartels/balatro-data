@@ -7,18 +7,52 @@ import {
 	YAxis,
 	Tooltip,
 } from 'recharts'
+import { AxisDomain } from 'recharts/types/util/types'
 import { Deck } from '../../stores/deckStore'
 import { STAKE_NAMES, StakeLevel } from '../../utils/constants'
 
 interface LineChartComponentProps {
 	deck: Deck
+	yOption: 'winRate' | 'ante'
 }
-const LineChartComponent: React.FC<LineChartComponentProps> = ({ deck }) => {
+
+interface AxisConfigProps {
+	domain: AxisDomain
+	ticks: number[] | undefined
+	tickFormatter: (value: number) => string
+	tooltipFormatter: (value: number) => string
+	label: string
+}
+const LineChartComponent: React.FC<LineChartComponentProps> = ({
+	deck,
+	yOption,
+}) => {
 	const chartData = Object.entries(deck.stakes).map(([stake, stats]) => ({
 		stake: Number(stake),
 		winRate: stats.win_rate,
 		stakeName: STAKE_NAMES[Number(stake) as StakeLevel],
+		ante: stats.avg_max_ante,
 	}))
+
+	const axisConfig: Record<'winRate' | 'ante', AxisConfigProps> = {
+		winRate: {
+			domain: [0, 1],
+			ticks: [0, 0.25, 0.5, 0.75, 1.0],
+			tickFormatter: (value: number) => `${value}`,
+			// `${value * 100}%`,
+			tooltipFormatter: (value: number) => `${(value * 100).toFixed(0)}%`,
+			label: 'Win Rate',
+		},
+		ante: {
+			domain: [0, 'auto'],
+			ticks: [0, 2, 4, 6, 8], // Let Recharts handle tick values
+			tickFormatter: (value: number) => value.toFixed(0),
+			tooltipFormatter: (value: number) => value.toFixed(1),
+			label: 'Avg Final Ante',
+		},
+	}
+
+	const currentConfig = axisConfig[yOption]
 
 	const stakeColors = {
 		1: '#64748b', // gray
@@ -50,14 +84,14 @@ const LineChartComponent: React.FC<LineChartComponentProps> = ({ deck }) => {
 					tickFormatter={(value) => STAKE_NAMES[value as StakeLevel]}
 				/>
 				<YAxis
-					domain={[0, 1]}
-					ticks={[0, 0.25, 0.5, 0.75, 1]}
-					tickFormatter={(value) => `${value * 100}%`}
+					domain={currentConfig.domain}
+					ticks={currentConfig.ticks}
+					tickFormatter={currentConfig.tickFormatter}
 				/>
 				<Tooltip
 					formatter={(value) => [
-						`${(Number(value) * 100).toFixed(0)}%`,
-						'Win Rate',
+						currentConfig.tooltipFormatter(Number(value)),
+						currentConfig.label,
 					]}
 					labelFormatter={(stake) => [
 						`${STAKE_NAMES[stake as StakeLevel]} Stake`,
@@ -79,7 +113,7 @@ const LineChartComponent: React.FC<LineChartComponentProps> = ({ deck }) => {
 				})} */}
 				<Line
 					type="monotone"
-					dataKey="winRate"
+					dataKey={yOption}
 					stroke="url(#colorGradient)"
 					strokeWidth={2}
 				/>

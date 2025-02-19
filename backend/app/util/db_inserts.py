@@ -53,10 +53,10 @@ def new_run(data) -> None:
             previous_run.max_ante = max_ante
 
             # Update deck/stake win rates
-            DeckStakeStats.update_stake_win_rates(
+            DeckStakeStats.update_stats(
                 session, previous_run.deck_id, previous_run.stake
             )
-            Deck.update_win_rate(session, previous_run.deck_id)
+            Deck.update_stats(session, previous_run.deck_id)
 
             # Get Jokers and update win rates
             joker_ids = (

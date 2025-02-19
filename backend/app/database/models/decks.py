@@ -1,6 +1,17 @@
 from http import server
-from sqlalchemy import String, Float, text, func, DateTime, case, ForeignKey, Integer
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import (
+    String,
+    Float,
+    text,
+    func,
+    DateTime,
+    case,
+    ForeignKey,
+    Integer,
+    select,
+)
+from sqlalchemy.orm import Mapped, column_property, mapped_column
+from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.dialects.postgresql import UUID
 from app.database.main import Base
 from app.database.models.runs import Run
@@ -22,6 +33,9 @@ class Deck(Base):
         DateTime, server_default=func.now()
     )
     # runs = relationship("Run", back_populates="deck")
+    avg_max_ante: Mapped[float] = mapped_column(
+        Float, server_default="0.0", nullable=False
+    )
 
     @property
     def stakes(self):
@@ -31,11 +45,12 @@ class Deck(Base):
             stakes_dict[stat.stake] = {
                 "win_rate": stat.win_rate,
                 "win_rate_updated_at": stat.win_rate_updated_at,
+                "avg_max_ante": stat.avg_max_ante,
             }
         return stakes_dict
 
     @classmethod
-    def update_win_rate(cls, session, deck_id):
+    def update_stats(cls, session, deck_id, stake=None):
         result = (
             session.query(
                 func.count(
@@ -50,8 +65,20 @@ class Deck(Base):
         wins, total = result
         win_rate = wins / total if total > 0 else 0.0
 
+        # Add avg_max_ante calculation
+        avg_ante = (
+            session.query(func.avg(Run.max_ante))
+            .filter(Run.deck_id == deck_id, Run.complete == True)
+            .scalar()
+            or 0.0
+        )
+
         session.query(cls).filter(cls.id == deck_id).update(
-            {"win_rate": win_rate, "win_rate_updated_at": func.now()}
+            {
+                "win_rate": win_rate,
+                "win_rate_updated_at": func.now(),
+                "avg_max_ante": avg_ante,
+            }
         )
 
         session.commit()
@@ -72,6 +99,9 @@ class DeckStakeStats(Base):
     win_rate_updated_at: Mapped[datetime] = mapped_column(
         DateTime, server_default=func.now()
     )
+    avg_max_ante: Mapped[float] = mapped_column(
+        Float, server_default="0.0", nullable=False
+    )
 
     def get_stake_stats(self, session, stake=None):
         query = session.query(DeckStakeStats).filter_by(deck_id=self.id)
@@ -81,7 +111,7 @@ class DeckStakeStats(Base):
         return query.all()
 
     @classmethod
-    def update_stake_win_rates(cls, session, deck_id, stake):
+    def update_stats(cls, session, deck_id, stake):
         result = (
             session.query(
                 func.count(func.distinct(case((Run.win == True, Run.id)))),
@@ -93,6 +123,12 @@ class DeckStakeStats(Base):
 
         wins, total = result
         win_rate = wins / total if total > 0 else 0.0
+        avg_ante = (
+            session.query(func.avg(Run.max_ante))
+            .filter(Run.deck_id == deck_id, Run.stake == stake, Run.complete == True)
+            .scalar()
+            or 0.0
+        )
 
         stats = (
             session.query(DeckStakeStats)
@@ -103,12 +139,14 @@ class DeckStakeStats(Base):
         if stats:
             stats.win_rate = win_rate
             stats.win_rate_updated_at = func.now()
+            stats.avg_max_ante = avg_ante
         else:
             stats = DeckStakeStats(
                 deck_id=deck_id,
                 stake=stake,
                 win_rate=win_rate,
                 win_rate_updated_at=func.now(),
+                avg_max_ante=avg_ante,
             )
             session.add(stats)
 

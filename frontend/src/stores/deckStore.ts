@@ -7,10 +7,12 @@ export type Deck = {
 	desc: string
 	win_rate: number
 	win_rate_updated_at: string
+	avg_max_ante: number
 	stakes: {
 		[key: string]: {
 			win_rate: number
 			win_rate_updated_at: string
+			avg_max_ante: number
 		}
 	}
 }

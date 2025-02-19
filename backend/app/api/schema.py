@@ -5,6 +5,7 @@ from datetime import datetime
 class StakeStats(BaseModel):
     win_rate: float
     win_rate_updated_at: datetime
+    avg_max_ante: float
 
 
 class DeckResponse(BaseModel):
@@ -13,4 +14,5 @@ class DeckResponse(BaseModel):
     win_rate_updated_at: datetime
     id: str
     desc: str
+    avg_max_ante: float
     stakes: dict[int, StakeStats]
